@@ -1,0 +1,312 @@
+JDK installations
+
+
+https://www.java.com/download/ie_manual.jsp
+https://www.oracle.com/in/java/technologies/javase-downloads.html
+------------------------------------------
+
+IDE ( Integrated Developmented Environment )
+
+https://spring.io/tools ( STS ===> Spring Tool Suite)
+Eclipse/STS
+
+----------------------------------------------====
+https://www.tutorialspoint.com/java/index.htm
+https://www.javatpoint.com/java-tutorial
+https://beginnersbook.com/java-tutorial-for-beginners-with-examples/
+
+This is the default location for the workspace which can be changed
+C:\Users\username\Documents\workspace-spring-tool-suite-4-4.6.0.RELEASE
+
+
+-------------------------------------------------------------------------------------------------------------
+1) File =====> New Java Project
+2) Opens a dialog box and create a project.
+3) Right clicked on the project folder and asked for a new package.
+    com.cts.demo
+4) We have to create a class which will contain the main method and
+as we know in programming languages like C, C++, Java , main is the
+entry point of the code from where the execution starts.
+In Java even the main method we need to write within a class.
+Let us plan for a class called Hello and within the Hello class 
+we will create a method called main.
+
+How we can create a class?
+
+Right click on the project .
+File ----> New -------> class
+-------------------------------------------------------------
+Create a class and main method
+package com.cts.demo;
+public class Hello {
+
+	public static void main(String[] args) {
+	// TODO Auto-generated method stub
+	}
+}
+---------------------------------------------------
+To print something we require System.out.println("Hello FriendS!!!!");
+
+Simply write syso. Press Ctrl+<space bar>
+-------------------------------------------------------------------
+package com.cts.demo;
+
+public class Hello {
+
+	public static void main(String[] args) {
+		System.out.println("Hello");
+
+	}
+
+}
+
+----------------------------------------------------------------------
+How to execute the code?
+
+Write click on the code editor. Run As------> Java Application
+----------------------------------------------------------------------
+
+You are able do both the installations:
+
+1) Installation JDK
+2) Installation STS
+3) Whether you are able to write your first code
+4) Whether you are able to execute it or not
+
+----------------------------------------------------------------------------------------------------------
+Comments are given so that the code is not compiled or sometime the comments are given for inline
+documentations.
+
+* single line comment 
+* multiple lines comment
+* Comments for documentation
+
+Taking the user input and display or maybe doing some calculations
+// To scan or take or accept the user input , we have to create an object of Scanner class.
+// Scanner scanner; We have created a reference variable of Scanner class and scanner is the reference variable.
+// new Scanner(System.in); =====> new is a keyword which is used to create an object during the runtime
+( When the code is executed)
+   
+ Scanner(System.in) ======> basically it is constructor call where we are passing an object.in is an Object
+of InputStream class.
+
+ 1) Scanner scanner; // Initially creating the reference of Scanner class
+ 2) new Scanner(System.in); // We are creating an objec of Scanner class and is being initialised with an object of InputStream.
+
+Both the above lines can be combined to a single line which means 
+We are creating an object of Scanner class (in the right hand side)and storing the reference of newly created 
+object in the reference variable scanner ( which in the left hand side)
+
+Scanner scanner=new Scanner(System.in);
+--------------------------------------------------------------------------------------------------------
+
+Is this class is within any package?
+ans yes
+So how we are going to use the class which is within a predefined package?
+ans write the import statement at the top.
+
+-----------------------------------------------------------
+/* Demo code to accept a number from user and get it displayed 
+*/
+
+package com.cts.demo;
+
+import java.util.Scanner;
+
+public class UserInput {
+
+	public static void main(String[] args) {
+		// The object of Scanner class helps in accepting user input 
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the number");
+		int num1=scan.nextInt();
+		System.out.println("The entered number is "+num1);
+
+	}
+
+}
+
+---------------------------------------------------------------------------------------------------------------class naming conventions;
+
+
+If a class name consists of single word , first character of the class name is written in upper case. example
+Demo
+String
+System
+Scanner
+----------------------------------------------------------------------------------------------
+If a class name consists multiple words, Every word's first character is written in uppercase.
+UserInput
+InputStream
+StringBuffer
+StringBuilder
+
+--------------------------------------------------------------------------------------------------
+method and variable naming conventions. If the variable or method consist of a single word,so the entire 
+word is written in smallcase
+
+name ( variable name)
+display() ( display is a method )
+
+-------------------------------------------------------------------------------------------------------
+If they consists of multiple words , the second word onwards , the first character is written in uppercase
+(variable names)
+firstName
+middleName
+employeeDesignation
+------------------------------------------------------------------------------------------------------
+method names
+
+displayData()
+readData()
+employeeDataDetails()
+----------------------------------------------------------------------------------
+
+Basically two types of data:
+Primitive type====> char,byte,short,int,long,float,double,boolean
+Whenever we are working with primitive type. The variable declared is called as variable only
+  int num; // we should say we have declared a variable num of int type
+Reference type====> Whenever we are creating classes or using predefined classes
+ UserInput
+ Hello
+ Scanner
+ String
+ System
+String str; //   str is an object or reference variable which stores the address of the string Hello.
+String str="Hello";
+Scanner scan; // scan is an object or reference variable which stores the address of newly created object 
+Scanner scan=new Scanner(System.in);
+--------------------------------------------------------------
+
+package com.cts.demo;
+
+import java.util.Scanner;
+
+public class UserInput {
+
+	public static void main(String[] args) {
+		// scan is an object or a reference variable of Scanner class
+		Scanner scan=new Scanner(System.in);
+		// num1 and num2 are variable of int type
+		int num1=0;
+		int num2=0;
+		System.out.println("Enter the first number num1");
+		num1=scan.nextInt();
+		System.out.println("Entrer the second number num2");
+		num2=scan.nextInt();
+		int result=num1+num2;
+		System.out.println("num1+num2="+result);
+		System.out.println(num1+"+"+num2+"="+result);
+
+	}
+
+}
+-------------------------------------------------------------------------------------------------
+
+ackage com.cts.demo;
+
+import java.util.Scanner;
+
+public class StringUserInput {
+
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		 String name;
+		 System.out.println("Enter a name");
+		 // It will accept a single word
+		 //name=scanner.next();
+       // To accept multiple words
+		 name=scanner.nextLine();
+		 
+		 System.out.println(name);
+	}
+
+}
+--------------------------------------------------------------------------------------------------
+Condition check
+   if construct
+   switch case
+
+Iterations
+ while loop
+ do while loop
+ for
+------------------------------------------------------------------------------------------------------------
+
+if(expression)   ====> expression of boolean type
+
+  int num1=1;
+  if(num1) {} in case of c the code is fine , so any non zero value turns out to be true
+  In case of java the code is wrong
+  if(num1==1) {} this statement will be correct in Java
+
+
+   while(expression) =====> expression should be of boolean type
+   do {}while(expression)=====> expression should be of boolean type
+   for(initialisation;expression;reinitialisation)=====> expression should be of boolean type
+
+---------------------------------------------------------------------------------------------------------------&& ===> true && true ===> true
+|| ===>  false || true===> true
+         true  || false===> true
+         true  || true ===> true
+         false || false ===> false
+--------------------------------------------------------------------------------------------------------
+
+package demo6;
+
+import java.util.Scanner;
+
+public class UserInput {
+
+	public static void main(String[] args) {
+		// scan is an object or a reference variable of Scanner class
+		Scanner scan=new Scanner(System.in);
+		// num1 and num2 are variable of int type
+		int num1=0;
+		int num2=0;
+		System.out.println("Enter the first number num1");
+		num1=scan.nextInt();
+		System.out.println("Entrer the second number num2");
+		num2=scan.nextInt();
+		if(num1>0 && num2>0)
+		{
+		
+		int result=num1+num2;
+		System.out.println("num1+num2="+result);
+		System.out.println(num1+"+"+num2+"="+result);
+		}
+		else
+		{
+			System.out.println("Both the number should be positive");
+		}
+	}
+
+}
+------------------------------------------------------------------------------------------------------------------
+
+package com.cts.demo.iterations;
+
+public class WhileDemo {
+
+	public static void main(String[] args) {
+		
+		int i=0; // Initialisation based on which
+		// on which it is decided to be within the 
+		//loop or not
+		// The below while is incorrect
+		//while(i=10)
+		while(i<10)
+		{
+			System.out.println(i);
+			i++; // reinitialisation step
+		}
+	}
+
+}
+--------------------------------------------------------------------------------------------------------
+
+
+
+    
+
+
